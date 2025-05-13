@@ -1,4 +1,3 @@
-
 # Raga AI - Multi-Agent Finance Assistant
 
 A sophisticated multi-source, multi-agent finance assistant that delivers spoken market briefs via a Streamlit app. This system combines real-time market data, document analysis, and voice interaction to provide comprehensive financial insights.
@@ -60,10 +59,6 @@ A sophisticated multi-source, multi-agent finance assistant that delivers spoken
 - Create a new branch
 - Make your changes
 - Submit a pull request
-
-## License
-
-[Specify your project's license]
 
 ## Setup Instructions
 
