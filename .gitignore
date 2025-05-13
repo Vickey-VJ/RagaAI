@@ -1,0 +1,56 @@
+# Virtual Environment
+venv/
+*.venv
+env/
+.env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Streamlit
+.streamlit/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Secrets and sensitive files
+*.key
+*.pem
+*.cert
+
+# Dependency directories
+node_modules/
+
+# Build and distribution
+dist/
+build/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Machine Learning model files (if any)
+*.model
+*.h5
+*.pkl
+
+# Miscellaneous
+.pytest_cache/
+.coverage
+htmlcov/
