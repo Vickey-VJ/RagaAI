@@ -4,7 +4,9 @@ import os
 import base64
 import io
 import json
+import subprocess
 
+subprocess.run(["python", "streamlit_app/main.py"])
 # Configuration
 ORCHESTRATOR_URL = os.getenv("ORCHESTRATOR_SERVICE_URL", "http://localhost:8006")
 ORCHESTRATOR_QUERY_ENDPOINT = f"{ORCHESTRATOR_URL}/orchestrate/query/"

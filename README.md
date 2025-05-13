@@ -1,41 +1,130 @@
-# Multi-Agent Finance Assistant
 
-This project is a multi-source, multi-agent finance assistant that delivers spoken market briefs via a Streamlit app.
+# Raga AI - Multi-Agent Finance Assistant
+
+A sophisticated multi-source, multi-agent finance assistant that delivers spoken market briefs via a Streamlit app. This system combines real-time market data, document analysis, and voice interaction to provide comprehensive financial insights.
 
 ## Architecture
 
-The application uses a microservices architecture with the following components:
+### Agent Components
 
-- Orchestrator Service: Coordinates all other services
-- API Service: Handles external API calls
-- Scraping Service: Retrieves web data
-- Retriever Service: Manages document retrieval from the vector store
-- Language Service: Provides NLP capabilities
-- Analysis Service: Analyzes financial data
-- Voice Service: Converts text to speech
+- **API Agent**: Real-time market data integration via AlphaVantage/Yahoo Finance
+- **Scraping Agent**: Document processing and filing analysis
+- **Retriever Agent**: Vector store integration for RAG (FAISS/Pinecone)
+- **Analysis Agent**: Quantitative analysis and risk assessment
+- **Language Agent**: Natural language synthesis using LLMs
+- **Voice Agent**: Speech-to-text and text-to-speech pipelines
 
-## Setup & Deployment
+### Technical Stack
 
-### Local Deployment
+- **Frontend**: Streamlit
+- **Backend**: FastAPI microservices
+- **AI/ML**: LangChain, CrewAI, Whisper
+- **Data Storage**: FAISS/Pinecone
+- **Containerization**: Docker
+
+## Setup Instructions
 
 1. Clone the repository
-2. Install dependencies:
+
+   ```bash
+   git clone https://github.com/Vickey-VJ/RagaAI.git
+   cd raga-ai
    ```
+2. Create a virtual environment
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install dependencies
+
+   ```bash
    pip install -r requirements.txt
    ```
-3. Run the main application:
+4. Set up API keys
+
+   - Create a `.env` file with:
+     ```
+     GEMINI_API_KEY=your_gemini_api_key
+     ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key
+     ```
+5. Run the Streamlit app
+
+   ```bash
+   streamlit run streamlit_app/main.py
    ```
-   python app/main.py
-   ```
-4. Open the Streamlit app in your browser at http://localhost:8501
 
-### Streamlit Cloud Deployment
+## Contributing
 
-The application is configured to run on Streamlit Cloud with limited functionality. To deploy:
+- Fork the repository
+- Create a new branch
+- Make your changes
+- Submit a pull request
 
-1. Fork this repository to your GitHub account
-2. Log in to [Streamlit Cloud](https://streamlit.io/cloud)
-3. Create a new app, selecting your repository and using `streamlit_app.py` as the main file
-4. Deploy the app
+## License
 
-Note: The Streamlit Cloud deployment provides a demo version with simulated responses as the backend services cannot run in the Streamlit Cloud environment.
+[Specify your project's license]
+
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/raga_ai.git
+cd raga_ai
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables:
+
+```bash
+cp .env.example .env
+# Edit .env with your API keys
+```
+
+4. Run the application:
+
+```bash
+streamlit run streamlit_app/main.py
+```
+
+## Project Structure
+
+```
+aga_ai/
+├── data_ingestion/     # Data pipeline components
+├── agents/            # Individual agent implementations
+├── orchestrator/      # Service orchestration
+├── streamlit_app/     # Frontend application
+├── tests/            # Test suite
+├── docs/             # Documentation
+└── docker/           # Docker configuration
+```
+
+## Features
+
+- Real-time market data integration
+- Document analysis and filing processing
+- Voice interaction capabilities
+- RAG-based information retrieval
+- Quantitative analysis and risk assessment
+- Natural language synthesis
+
+## Output
+
+![1747148523798](image/README/1747148523798.png)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- AlphaVantage for market data
+- OpenAI for LLM capabilities
+- Hugging Face for open-source models
